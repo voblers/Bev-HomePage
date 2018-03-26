@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+body {
+    min-width: 900px;
+    margin: 0;
+    background-color: #333;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+    clear: both;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 2px;
+}
+img {
+    display: block;
+    border: 0;
+    width: 100%;
+    height: auto;
+}
+p {
+    margin-bottom: 1.5em;
+    color: black;
+}
+@-moz-document url-prefix() {
+    .card {
+        display: table;
+    }
+}
+.bevGradient {
+    background-color: #86717b;
+    /* IE9, iOS 3.2+ */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj48c3RvcCBzdG9wLWNvbG9yPSIjOTIyNzhmIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiM5MjI3OGYiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjMzMjk5OTk5OTk5OTk5OTk2Ii8+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmYzcwMCIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjAuMzMyOTk5OTk5OTk5OTk5OTYiLz48c3RvcCBzdG9wLWNvbG9yPSIjZmZjNzAwIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMC42NjkiLz48c3RvcCBzdG9wLWNvbG9yPSIjMDA2NWUzIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMC42NjkiLz48c3RvcCBzdG9wLWNvbG9yPSIjMDA2NWUzIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMSIvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCN2c2dnKSIgLz48L3N2Zz4=);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%,color-stop(0, rgb(146, 39, 143)),color-stop(0.333, rgb(146, 39, 143)),color-stop(0.333, rgb(255, 199, 0)),color-stop(0.669, rgb(255, 199, 0)),color-stop(0.669, rgb(0, 101, 227)),color-stop(1, rgb(0, 101, 227)));
+    /* Android 2.3 */
+    background-image: -webkit-linear-gradient(top,rgb(146, 39, 143) 0%,rgb(146, 39, 143) 33.3%,rgb(255, 199, 0) 33.3%,rgb(255, 199, 0) 66.9%,rgb(0, 101, 227) 66.9%,rgb(0, 101, 227) 100%);
+    /* IE10+ */
+    background-image: linear-gradient(to bottom,rgb(146, 39, 143) 0%,rgb(146, 39, 143) 33.3%,rgb(255, 199, 0) 33.3%,rgb(255, 199, 0) 66.9%,rgb(0, 101, 227) 66.9%,rgb(0, 101, 227) 100%);
+    background-image: -ms-linear-gradient(top,rgb(146, 39, 143) 0%,rgb(146, 39, 143) 33.3%,rgb(255, 199, 0) 33.3%,rgb(255, 199, 0) 66.9%,rgb(0, 101, 227) 66.9%,rgb(0, 101, 227) 100%);
+}
+.card {
+    margin: 20px;
+    max-height: fit-content;
+    min-width: 500px;
+    max-width: 1000px;
+    background-color: white;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 45%;
+    overflow: hidden;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-content {
+    font-size: 14pt;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 25px;
+}
+.card-content h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+.cards-center {
+    min-width: inherit;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.card-centered-image {
+    min-height: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.card-no-restrictions {
+    max-width: fit-content;
+    max-width: -moz-max-content;
+    flex-grow: unset;
+}
+.cards-single {
+    min-width: inherit;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cards-single .card{
+    max-height: fit-content;
+    max-width: 2000px;
+}
+.card-thumbnail {
+    min-height: 250px;
+    max-height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.card-thumbnail img {
+    min-height: 150px;
+    max-height: 150px;
+}
+.card-thumbnail-contain {
+    background-size: contain;
+    background-color: #894B73;
+}
+.card-thumbnail-show {
+}
+.card-title {
+    margin: 2vh;
+    text-align: center;
+    color: #007489;
+    text-transform: uppercase;
+    font-size: 28pt;
+}
+.divider {
+    display: none;
+    width: 100%;
+    height: 7px;
+    background: linear-gradient(to right, #894B73 0%, #894B73 33%, #ABA251 33%, #ABA251 66%, #90C7E5 66%);
+}
+.headerTitle {
+    width: inherit;
+    margin: 0;
+    font-size: 25pt;
+    font-weight: bold;
+    font-family: Georgia, serif;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.headerTitle a{
+    text-decoration: none;
+    color: #ABA251;
+}
+.headerTitleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.location-map {
+    background: white;
+    height: 500px;
+}
+.logo {
+    max-width: 130px;
+    background: url(../img/gerb.png) no-repeat center;
+    background-size: 60%;
+    flex-grow: 1;
+}
+.slideout-menu {
+    position: fixed;
+    width: 256px;
+    min-height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    z-index: 0;
+    display: none;
+}
+
+.slideout-menu-left {
+    left: 0;
+}
+
+.slideout-menu-right {
+    right: 0;
+}
+
+.slideout-panel {
+    position: relative;
+    z-index: 1;
+    will-change: transform;
+    background-color: #FFF; /* A background-color is required */
+    min-height: 100vh;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+    overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+    display: block !important;
+}
+.topic-change {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    background: #0f0c29; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0f0c29, #302b63, #24243e); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #333, rgba(137,75,115, 1), #333); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.topic-change p {
+    font-size: 36pt;
+    font-weight: bold;
+    letter-spacing: 5;
+    text-align: center;
+    flex-grow: 1;
+    color: white;
+}
+#footer-area {
+    display: grid;
+    width:100%;
+    /*height: 80;*/
+    background: #333;
+}
+#footer-area p {
+    color: white;
+    text-align: center;
+    vertical-align: center;
+}
+#idSection {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+#logoContainer {
+    width: 150px;
+    height: inherit;
+}
+#main-area {
+    min-height: calc(100% - 150px - 80px);
+    min-width: 500px;
+    margin-left: 5%;
+    margin-right: 5%;
+    /*box-shadow: 0 0 20px 2px #606060, 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    background: linear-gradient(to right, rgba(51,51,51, 1) 0%, rgba(96,96,96, 0) 60%, rgba(51,51,51, 1) 100%),
+        linear-gradient(to bottom, rgba(96,96,96, 1) 80%, #333 100%);
+    background-blend-mode: normal,color-burn;
+}
+#menu {
+    display: none;
+}
+#pageMenu {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+#pageMenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+}
+#pageMenu li {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#pageMenu li:hover, li.pageActive {
+    background-color: #606060;
+}
+#pageMenu a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 25pt;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+#pageMenu.mobile {
+    display: none;
+}
+#topHeader {
+    height: 150px;
+    background: linear-gradient(to right, rgba(51,51,51, 1.0) 25%, rgba(255, 255, 255, 0.0) 50%, rgba(51,51,51, 1.0) 75%),
+        linear-gradient(to bottom right, rgba(137,75,115, 1.0) 33%, rgba(171,162,81, 1.0) 45%, rgba(144,199,229, 1.0) 66%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+#wappen {
+    background: url('../img/Beveronija-Vapenis.gif') no-repeat center;
+}
+@media (max-width: 980px) {
+    body {
+        min-width: unset;
+    }
+    .card {
+        min-width: fit-content;
+    }
+    .card-content {
+        font-size: 16pt;
+    }
+    .card-content:not(.no-hide) {
+        display: none;
+    }
+    .card-content.no-hide {
+        display: block;
+    }
+    .card-no-restrictions {
+        flex-grow: 1;
+        max-width: unset;
+    }
+    .card-title {
+        font-size: 26pt;
+    }
+    .card-title-thumbnail:not(.no-hide) {
+        display: none;
+    }
+    .card-title-thumbnail.no-hide {
+        display: block;
+    }
+    .card-thumbnail {
+        background-image: url(../img/misc/loading.gif) !important;
+        background-color: white;
+        background-size: 25%;
+    }
+    .fade-in	{
+        visibility: visible !important;
+        max-height: fit-content !important;
+    }
+    .headerTitle {
+        font-size: 14pt;
+    }
+    .logo {
+        background-size: contain;
+        margin: 5px;
+    }
+    .mobile-less-info {
+        display:none;
+        background: url(../img/misc/arrow-up.png) no-repeat center;
+        height: 100px;
+        background-size: 18%;
+    }
+    .mobile-more-info {
+        background: url(../img/misc/arrow-down.png) no-repeat center;
+        height: 100px;
+        background-size: 18%;
+    }
+    #footer-area {
+        font-size: 12pt;
+    }
+    #main-area {
+        min-width: unset;
+        margin-left: 1%;
+        margin-right: 1%;
+        background: linear-gradient(to right, rgba(51,51,51, 1) 0%, rgba(96,96,96, 0) 60%, rgba(51,51,51, 1) 100%),
+            linear-gradient(to bottom, rgba(51,51,51, 1) 0%, rgba(96,96,96, 1) 50%, #333 100%);
+    }
+    #menu {
+        background-color: #333;
+        min-height: calc(100% - 150px - 80px);
+        color: white;
+        background: linear-gradient( rgba(51,51,51, 0.6), rgba(51,51,51, 0.6) ), url(../img/Beveronija-Vapenis.gif);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+    }
+
+    #menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    #menu li {
+        float: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #menu li:hover, li.pageActive {
+        background-color: #606060;
+    }
+    #menu a {
+        display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-family: Georgia, serif;
+        font-size: 28pt;
+        padding-right: 25;
+        padding-left: 25;
+    }
+    #topHeader {
+        height: fit-content;
+        height: -moz-fit-content;
+        display: grid;
+        background: linear-gradient(to right, rgba(51,51,51, 1.0) 10%, rgba(255, 255, 255, 0.0) 50%, rgba(51,51,51, 1.0) 90%),
+            linear-gradient(to bottom right, rgba(137,75,115, 1.0) 33%, rgba(171,162,81, 1.0) 45%, rgba(144,199,229, 1.0) 66%);
+    }
+    #pageMenu.desktop {
+        display: none;
+    }
+    #pageMenu.mobile {
+        display: flex;
+        justify-content: left;
+    }
+    #pageMenu .material-icons {
+        font-size: 36pt;
+        color: white;
+        margin-left: 20px;
+    }
+    #pageMenu a {
+        font-size: 60pt;
+    }
+    #pageMenu ul {
+        flex-direction: column;
+    }
+}
